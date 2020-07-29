@@ -1,20 +1,10 @@
-$min-lg: '(min-width: 992px)';
-$max-lg: '(max-width: 1199.98px)';
-$min-xg: '(min-width: 1200px)';
-
-$max-xs: '(max-width: 575.98px)';
-$min-sm: '(min-width: 576px)';
-$max-sm: '(max-width: 767.98px)';
-$min-md: '(min-width: 768px)';
-$max-md: '(max-width: 991.98px)';
-
 header {
   background-color: $bg-color;
   color: $font-color;
   box-shadow: inset 0 -2px 0 0 $header-shadow-color;
   top: 0;
   z-index: 3;
-  // position: sticky;
+  position: sticky;
 }
 @media (max-width: 991.98px) {
   header {
@@ -25,25 +15,16 @@ header .container-fluid {
   padding: 32px 108px 0 108px;
 }
 
-//Extra small devices (portrait phones, less than 576px)
 @media (max-width: 767.98px) {
   header .container-fluid {
-    padding: 16px 16px 0 16px;
+    padding: 16px 0px 0px 0px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   header .container-fluid {
-    padding: 16px 16px 0 16px;
+    padding: 16px 0px 0 0px;
   }
-}
-
-// Large devices (desktops, 992px and up)
-@media (max-width: 1199.98px) {
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
 }
 
 header .upper-header .wrapper-item:nth-of-type(3) {
@@ -88,24 +69,12 @@ header .upper-header .wrapper-item .item .phone a span {
   @extend %header_icon;
 }
 
-header .upper-header .wrapper-item .logo {
-  // padding-top: 14px;
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  header .upper-header .wrapper-item .logo {
-    padding-top: 5px;
-  }
-}
-
 header .upper-header .wrapper-item:nth-of-type(1) .item:nth-of-type(1) {
-  // background-color: red !important;
   margin-left: 0;
   position: relative;
 }
 
 header .upper-header .wrapper-item:nth-of-type(1) .item:nth-of-type(2) {
-  // background-color: red !important;
   margin-left: 23px;
   position: relative;
 }
@@ -113,40 +82,20 @@ header .upper-header .wrapper-item:nth-of-type(3) .item:nth-of-type(1) {
   padding-right: 47px;
   position: relative;
 }
-// @media (max-width: 575.98px) {
-//   header .upper-header .wrapper-item:nth-of-type(1) .item:nth-of-type(2) {
-//     margin-left: 12px;
-//   }
 
-//   header .upper-header .wrapper-item:nth-of-type(3) .item:nth-of-type(1) {
-//     padding-right: 12px;
-//   }
-// }
 @media (max-width: 767.98px) {
   header .upper-header .wrapper-item:nth-of-type(3) .item:nth-of-type(1) {
     padding-right: 0px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-  header .container-fluid {
-    padding: 16px 16px 0 16px;
-  }
-}
-
-// Extra small devices (portrait phones, less than 576px)
 @media (min-width: 576px) and (max-width: 767.98px) {
   header .upper-header .wrapper-item:nth-of-type(1) .item:nth-of-type(2) {
     margin-left: 25px;
-    // padding-right: 20px;
-    // padding-left: 20px;
   }
-  // header .upper-header .wrapper-item:nth-of-type(1) .item:nth-of-type(1) {
-  //   padding-right: 0;
-  // }
+
   header .upper-header .wrapper-item:nth-of-type(3) .item:nth-of-type(1) {
     padding-right: 28px;
-    // padding-left: 20px;
   }
 }
 @media (max-width: 767.98px) {
@@ -160,21 +109,6 @@ header .upper-header .wrapper-item:nth-of-type(3) .item:nth-of-type(1) {
     letter-spacing: 0.2px;
   }
 }
-// Small devices (landscape phones, 576px and up)
-// @media (max-width: 767.98px) {
-//   header .upper-header .wrapper-item:nth-of-type(1) .item:nth-of-type(2) {
-//     margin-left: 0px;
-//     padding-right: 20px;
-//     padding-left: 20px;
-//   }
-//   header .upper-header .wrapper-item:nth-of-type(1) .item:nth-of-type(1) {
-//     padding-right: 0;
-//   }
-//   header .upper-header .wrapper-item:nth-of-type(3) .item:nth-of-type(1) {
-//     padding-right: 20px;
-//     padding-left: 20px;
-//   }
-// }
 
 header .upper-header .wrapper-item .item .cart a .assets {
   position: absolute;
@@ -182,11 +116,8 @@ header .upper-header .wrapper-item .item .cart a .assets {
   left: 6px;
   width: 20px;
   height: 20px;
-  // background-color: green !important;
 }
 
-//
-// Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   header .upper-header .wrapper-item .item .cart .assets {
     top: -17px;
@@ -194,7 +125,6 @@ header .upper-header .wrapper-item .item .cart a .assets {
   }
 }
 
-// Small devices (landscape phones, 576px and up)
 @media (max-width: 767.98px) {
   header .upper-header .wrapper-item .item .cart .assets {
     top: -16px;
@@ -203,7 +133,6 @@ header .upper-header .wrapper-item .item .cart a .assets {
 }
 
 header .upper-header .wrapper-item .item .cart span.cart-quantity {
-  // position: absolute;
   top: 2px;
   left: 5px;
   z-index: 2;
@@ -223,34 +152,19 @@ header .upper-header .wrapper-item .item > span:hover {
   color: #edb15d;
   cursor: pointer;
 }
-// navbar //1224
 
 .navbar {
   padding: 40px 0 28px 0px;
 }
-//Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .navbar {
-    padding: 10px 0;
-  }
-}
 
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 767.98px) {
-  .navbar {
-    padding: 13px 0;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
 @media (max-width: 991.98px) {
   .navbar {
-    padding: 15px 0;
+    padding: 0px;
   }
 }
 
 li.nav-item {
-  padding-right: 32px;
+  padding-right: 27px;
 }
 @media (max-width: 991.98px) {
   li.nav-item {
@@ -277,17 +191,21 @@ a.nav-link {
 .menu-group nav ul li.nav-item a {
   @extend %menue_item;
 }
-
-//search
-// form {
-//   border-bottom: 1px solid #fff;
-//   padding-bottom: 2px;
-// }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .menu-group nav ul li.nav-item a {
+    font-size: 11px;
+  }
+}
 
 form .input-group {
   border-bottom: 1px solid #fff;
   padding-bottom: 2px;
   margin-left: 52px;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  form .input-group {
+    margin-left: 0px;
+  }
 }
 @media (max-width: 991.98px) {
   form .input-group {
@@ -302,8 +220,6 @@ form .input-group {
 }
 
 form input[type='text'] {
-  // width: 192px;
-  // height: 16px;
   font-stretch: $font-stretch;
   font-style: $font-style;
   line-height: $input-lineheight;
@@ -341,16 +257,81 @@ form .input-group .input-group-text {
 .custom-toggler.navbar-toggler:hover {
   border-color: #edb15d;
 }
-// .custom-toggler .navbar-toggler-icon {
-//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(250, 250, 250, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-// }
 
-header button:focus {
+//mobile
+header .mobile button:focus {
   outline: none;
+  border: none;
 }
 
 header .menu-group {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+}
+
+header .mobile {
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0 -2px 0 0 $header-shadow-color;
+  padding: 16px 16px 8px 16px;
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header .mobile {
+    padding: 16px 30px 8px 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header .mobile {
+    padding: 16px 70px 8px 70px;
+  }
+}
+
+header .mobile .cart {
+  position: relative;
+  padding-left: 20px;
+}
+
+header .mobile .cart a .assets {
+  position: absolute;
+  top: -20px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+}
+header .mobile .cart a .assets span {
+  color: $color-cart-quantity;
+}
+header .mobile .btn1 {
+  padding-right: 20px;
+}
+header .mobile button {
+  padding: 0;
+}
+header .mobile span {
+  font-size: 12px;
+  color: #fff;
+}
+header .mobile a {
+  text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  header .navbar .form-inline .input-group {
+    padding: 11px 16px 11px 16px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header .navbar .form-inline .input-group {
+    padding: 11px 30px 11px 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header .navbar .form-inline .input-group {
+    padding: 11px 70px 11px 70px;
+  }
+}
+header .mobile form .input-group input::placeholder {
+  opacity: 0.4;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.23;
 }

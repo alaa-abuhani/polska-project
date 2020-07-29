@@ -7,16 +7,21 @@ var slickSlider = () => {
             slidesToScroll: 3,
             arrows: false,
             dots: false,
-            // centerMode: true,
-            // centerPadding: '20%',
             rtl: true,
+            responsive: [
 
-            responsive: [{
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3.5,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 3,
                         slidesToScroll: 2,
-                        // infinite: true,
                     }
                 },
 
@@ -44,10 +49,6 @@ var slickSlider = () => {
             ]
 
         });
-
-        var itemContainer = $('.wrapper-item-slide div.item .product ');
-        var itemContainer2 = $('.wrapper-item-slide .slick-initialized .slick-slider');
-        console.log("is" + itemContainer2.text());
     });
 }
 //select itemcontainer
@@ -67,9 +68,8 @@ function loadDoc() {
 
             slickSlider();
         }
-        //https://raw.githubusercontent.com/alaa-abuhani/yaya/master/dist/pro.json
     };
-    xhttp.open("GET", "pro.json", true);
+    xhttp.open("GET", "https://raw.githubusercontent.com/alaa-abuhani/project-version/master/dist/pro.json", true);
     xhttp.send();
 }
 loadDoc();
@@ -86,6 +86,10 @@ function creatProduct(obj) {
     const assetCart = document.createElement("div");
     assetCart.className = "asset-cart";
 
+
+
+
+
     const clildCart = document.createElement("img");
     const clildCartAtt = document.createAttribute("src");
     clildCartAtt.value = obj["product-cart"];
@@ -98,6 +102,11 @@ function creatProduct(obj) {
     cart.appendChild(assetCart);
     product.appendChild(cart);
 
+
+    const containerImg = document.createElement("div");
+    containerImg.className = "container-img";
+
+
     //append img
     const child1 = document.createElement("img");
     const chdAtt1 = document.createAttribute("src");
@@ -107,7 +116,9 @@ function creatProduct(obj) {
     chdAtt2.value = ("Card image cap");
     child1.setAttributeNode(chdAtt2);
     child1.className = "img";
-    product.appendChild(child1);
+    containerImg.appendChild(child1);
+
+    product.appendChild(containerImg);
 
     //append card body
     const child2 = document.createElement("div");
@@ -136,54 +147,3 @@ function creatProduct(obj) {
 
     return product;
 }
-// $(document).ready(function () {
-
-//     $.ajax({
-
-//         url: "https://raw.githubusercontent.com/alv2017/DataSets/master/Europe/europe-capital-cities.json",
-//         dataType: 'json',
-//         cache: false,
-//         success: function (data, status) {
-//             // $.each(data ,function(index){
-//             //     $("#data").append('<div>'+ data[index].username + '</div>');
-//             // });
-//             console.log("hi");
-
-//         },
-//         error: function (xhr, textstatus, err) {
-//             console.log(xhr);
-//             console.log(textstatus);
-//             console.log(err);
-
-
-//         }
-
-
-//     });
-// })
-//select itemcontainer
-
-
-$(document).ready(function () {
-    var itemContainer = $('.wrapper-item-slide div.item .product ');
-    var itemContainer2 = $('.wrapper-item-slide .slick-initialized .slick-slider');
-    console.log(itemContainer2.text());
-
-    $.ajax({
-        url: "https://raw.githubusercontent.com/alaa-abuhani/yaya/master/dist/pro.json",
-        success: function (result) {
-            let obj = JSON.parse(result);
-
-
-            // let obj = JSON.parse(this.responseText);
-            console.log(obj[0]);
-            console.log(itemContainer);
-        }
-    });
-
-
-    // function creatProduct($itemContainer, $obj) {
-
-    // }
-
-});
