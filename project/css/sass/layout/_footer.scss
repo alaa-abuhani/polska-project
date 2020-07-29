@@ -135,6 +135,13 @@ footer .second-menu {
     text-align: center;
   }
 }
+@media (min-width: 768px) and (max-width: 1991.98px) {
+  footer .second-menu {
+    margin-top: 20px;
+    padding-left: 0;
+    text-align: left;
+  }
+}
 
 footer .second-menu nav .find,
 footer .second-menu nav .about,

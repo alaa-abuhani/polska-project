@@ -7,16 +7,21 @@ var slickSlider = () => {
             slidesToScroll: 3,
             arrows: false,
             dots: false,
-            // centerMode: true,
-            // centerPadding: '20%',
             rtl: true,
+            responsive: [
 
-            responsive: [{
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3.5,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 3,
                         slidesToScroll: 2,
-                        // infinite: true,
                     }
                 },
 
@@ -44,9 +49,5 @@ var slickSlider = () => {
             ]
 
         });
-
-        var itemContainer = $('.wrapper-item-slide div.item .product ');
-        var itemContainer2 = $('.wrapper-item-slide .slick-initialized .slick-slider');
-        console.log("is" + itemContainer2.text());
     });
 }

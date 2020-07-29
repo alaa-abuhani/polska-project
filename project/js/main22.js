@@ -15,9 +15,8 @@ function loadDoc() {
 
             slickSlider();
         }
-        //https://raw.githubusercontent.com/alaa-abuhani/yaya/master/dist/pro.json
     };
-    xhttp.open("GET", "pro.json", true);
+    xhttp.open("GET", "https://raw.githubusercontent.com/alaa-abuhani/project-version/master/dist/pro.json", true);
     xhttp.send();
 }
 loadDoc();
@@ -34,6 +33,10 @@ function creatProduct(obj) {
     const assetCart = document.createElement("div");
     assetCart.className = "asset-cart";
 
+
+
+
+
     const clildCart = document.createElement("img");
     const clildCartAtt = document.createAttribute("src");
     clildCartAtt.value = obj["product-cart"];
@@ -46,6 +49,11 @@ function creatProduct(obj) {
     cart.appendChild(assetCart);
     product.appendChild(cart);
 
+
+    const containerImg = document.createElement("div");
+    containerImg.className = "container-img";
+
+
     //append img
     const child1 = document.createElement("img");
     const chdAtt1 = document.createAttribute("src");
@@ -55,7 +63,9 @@ function creatProduct(obj) {
     chdAtt2.value = ("Card image cap");
     child1.setAttributeNode(chdAtt2);
     child1.className = "img";
-    product.appendChild(child1);
+    containerImg.appendChild(child1);
+
+    product.appendChild(containerImg);
 
     //append card body
     const child2 = document.createElement("div");
